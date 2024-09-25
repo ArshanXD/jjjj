@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheats~XD</title>
+    <style>
+        body {
+            background-color: #FFCC00; /* رنگ زرد پر رنگ */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #FFD700;
+            position: relative;
+        }
+        .menu {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            display: none;
+            background-color: #FFF;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .menu a {
+            display: block;
+            padding: 5px;
+            text-decoration: none;
+            color: black;
+        }
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+        #main {
+            padding: 20px;
+        }
+        .video {
+            margin: 10px 0;
+        }
+        .buy-option {
+            display: flex;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+</body>
+    <header>
+        <h1>Cheats~XD</h1>
+        <div onclick="toggleMenu()">☰</div>
+        <div class="menu" id="menu">
+            <a href="#buy-cheat" onclick="closeMenu()">Buy Cheat</a>
+            <a href="#gameplays" onclick="closeMenu()">Game Plays</a>
+        </div>
+    </header>
+    <div id="main">
+        <h2>Welcom to Cheats~XD!</h2>
+        <p>Here you can buy cheats for different games and access gameplays.</p>
+
+        <div id="gameplays" style="display:none;">
+            <h3>GamePlays</h3>
+            <div class="video">
+                <h4>GamePlay</h4>
+                <video width="320" height="240" controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    مرورگر شما از ویدئو پشتیبانی نمی‌کند.
+                </video>
+                <p>Description</p>
+            </div>
+            <!-- ویدئوهای دیگر به همین شکل -->
+        </div>
+
+        <div id="buy-cheat" style="display:none;">
+            <h3>Buy Cheat</h3>
+            <div class="buy-option">
+                <div>
+                    <h4>Apex Legends Cheat</h4>
+                    <button onclick="showDetails('apex')">Buy</button>
+                </div>
+                <div>
+                    <h4>Zula Cheat</h4>
+                    <button onclick="showDetails('zula')">Buy</button>
+                </div>
+                <div>
+                    <h4>Soon</h4>
+                    <button onclick="showDetails('none')">Buy</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="details" style="display:none;">
+            <h3>For Buy @ArshanXD</h3>
+            <p id="detailText"></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function closeMenu() {
+            document.getElementById('menu').style.display = 'none';
+        }
+
+        function showSection(section) {
+            document.getElementById('gameplays').style.display = 'none';
+            document.getElementById('buy-cheat').style.display = 'none';
+            document.getElementById('details').style.display = 'none';
+            if (section === 'gameplays') {
+                document.getElementById('gameplays').style.display = 'block';
+            } else {
+                document.getElementById('buy-cheat').style.display = 'block';
+            }
+        }
+
+        function showDetails(option) {
+const detailText = {
+                apex: "Telegram Channel For Buy @ArshanXD    Pv For Buy @Arshan_XD",
+                zula: "Telegram Channel For Buy @ArshanXD    Pv For Buy @Arshan_XD",
+                none: "Soon...."
+            };
+            document.getElementById('detailText').innerText = detailText[option];
+            document.getElementById('details').style.display = 'block';
+        }
+
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                showSection(link.textContent.includes('Game Plays') ? 'gameplays' : 'buy-cheat');
+            });
+        });
+    </script>
+<head>
+<body>
+
+</html>
+
